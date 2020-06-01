@@ -1,0 +1,616 @@
+:root {
+  --pink:             #FF5370;
+  --orange:           #F76D47;
+  /* --yellow:           #FFB62C; */
+  /* --green:            #91B859; */
+  /* --turquoise:        #000000; */
+  --blue:             #2196F3;
+  /* --purple:           #7C4DFF; */
+  --violet:           #c86df2;
+  --brown:            #8D6E63;
+  
+  --light-pink:       #F07178;
+  /* --light-orange:     #F78C6C; */
+  --light-yellow:     #FFCB6B;
+  --light-green:      #98d16d;
+  --light-turquoise:  #40d3b7;
+  --light-blue:       #64B5F6;
+  --light-purple:     #9487ff;
+  --light-violet:     #C792EA;
+  --light-brown:      #A1887F;
+
+  /* --vlight-green:     #c1e3a6; */
+  /* --vlight-turquoise: #8be4d3; */
+  /* --vlight-blue:      #a1d2fa; */
+  /* --vlight-purple:    #beb6ff; */
+  /* --vlight-violet:    #dea6f7; */
+  
+  /* --red:              #E53935; */
+  /* --cyan:             #39ADB5; */
+  /* --pale-blue:        #8796B0; */
+  /* --light-red:        #FF5370; */
+  /* --light-cyan:       #89DDFF; */
+  /* --light-pale-blue:  #B2CCD6; */
+}
+
+.theme-dark {
+  --background-primary: #202020;
+  --background-primary-alt: #1a1a1a;
+  --background-secondary: #161616;
+  --background-secondary-alt: #080808;
+  --background-accent: #000;
+  --background-modifier-border: #333;
+  --background-heading-1: rgba(255, 255, 255, 0.066);
+  --background-heading-2: rgba(255, 255, 255, 0.066);
+  --background-heading-3: rgba(255, 255, 255, 0.066);
+  --background-heading-4: rgba(255, 255, 255, 0.038);
+  --background-heading-5: rgba(255, 255, 255, 0.024);
+  --background-heading-6: rgba(255, 255, 255, 0.0);
+  --background-heading-border: rgba(255, 255, 255, 0.14);
+  --background-horizontal-line: rgba(255, 255, 255, 0.18);
+  --background-hashtag: rgba(0, 0, 0, 0.2);
+  --background-quote: rgba(0, 0, 0, 0.2);
+  --background-table: rgba(0, 0, 0, 0.2);
+  --background-code: rgba(0, 0, 0, 0.2);
+  --text-accent: var(--blue);
+  --text-accent-hover: var(--light-blue);
+  --text-normal: #dcddde;
+  --text-bold: #e9eaeb;
+  --text-quote: #b5b6b7;
+  --text-muted: #888;
+  --text-faint: #555;
+  --text-heading: #e9eaeb;
+  --text-heading-1: #e9eaeb;
+  --text-heading-2: var(--light-green);
+  --text-heading-3: var(--light-turquoise);
+  --text-heading-4: var(--light-blue);
+  --text-heading-5: var(--light-purple);
+  --text-heading-6: var(--violet);
+  --text-code: var(--light-yellow);
+  --text-syntax-visible: var(--orange);
+  --text-syntax-invisible: #666;
+  --text-syntax-transformative: var(--light-violet);
+  --text-link: var(--blue);
+  --text-link-hover: var(--light-blue);
+  --text-link-name: var(--light-blue);
+  --text-link-url: var(--brown);
+  --text-link-url-hover: var(--light-brown);
+  --text-hashtag: var(--pink);
+  --text-hashtag-hover: var(--light-pink);
+  --text-highlight-bg: rgba(144, 178, 255, 0.32);
+  --text-highlight-bg-dark: rgba(144, 178, 255, 0.14);
+}
+
+/* Default font weight */
+body {
+  font-weight: 300;
+}
+
+/* Document padding */
+.CodeMirror {
+  padding: 0;
+}
+.CodeMirror-lines {
+  padding: 0;
+}
+.CodeMirror pre.CodeMirror-line,
+.CodeMirror pre.CodeMirror-line-like {
+  padding: 0;
+}
+.markdown-preview-view {
+  padding-top: 0;
+}
+
+/* Quote */
+.cm-s-obsidian span.cm-quote,
+.cm-s-obsidian pre.HyperMD-quote {
+  color: var(--text-quote);
+}
+.cm-s-obsidian pre.HyperMD-quote {
+  background-color: var(--background-quote);
+}
+.cm-s-obsidian span.cm-formatting-quote {
+  color: var(--text-syntax-transformative);
+}
+.markdown-preview-view blockquote {
+  margin-inline-start: 20px;
+  margin-inline-end: 20px;
+  padding: 10px 22px;
+}
+.markdown-preview-view blockquote p {
+  margin-bottom: inherit;
+  margin-top: inherit;
+  margin-left: 0;
+  margin-right: 0;
+}
+.markdown-preview-view blockquote :first-child {
+  margin-top: 5px;
+}
+.markdown-preview-view blockquote :last-child {
+  margin-bottom: 5px;
+}
+
+/* Heading */
+.cm-s-obsidian pre.HyperMD-header {
+  padding-left: 4px !important;
+}
+.cm-s-obsidian span.cm-formatting-header {
+  font-weight: 400;
+}
+.cm-s-obsidian span.cm-formatting-header-1 {
+  color: var(--text-heading-1);
+}
+.cm-s-obsidian span.cm-formatting-header-2 {
+  color: var(--text-heading-2);
+}
+.cm-s-obsidian span.cm-formatting-header-3 {
+  color: var(--text-heading-3);
+}
+.cm-s-obsidian span.cm-formatting-header-4 {
+  color: var(--text-heading-4);
+}
+.cm-s-obsidian span.cm-formatting-header-5 {
+  color: var(--text-heading-5);
+}
+.cm-s-obsidian span.cm-formatting-header-6 {
+  color: var(--text-heading-6);
+}
+.cm-s-obsidian pre.HyperMD-header.HyperMD-header-1 {
+  background-color: var(--background-heading-1);
+  font-size: inherit;
+}
+.cm-s-obsidian pre.HyperMD-header.HyperMD-header-2 {
+  background-color: var(--background-heading-2);
+  font-size: inherit;
+}
+.cm-s-obsidian pre.HyperMD-header.HyperMD-header-3 {
+  background-color: var(--background-heading-3);
+  font-size: inherit;
+}
+.cm-s-obsidian pre.HyperMD-header.HyperMD-header-4 {
+  background-color: var(--background-heading-4);
+  font-size: inherit;
+}
+.cm-s-obsidian pre.HyperMD-header.HyperMD-header-5 {
+  background-color: var(--background-heading-5);
+  font-size: inherit;
+}
+.cm-s-obsidian pre.HyperMD-header.HyperMD-header-6 {
+  background-color: var(--background-heading-6);
+  font-size: inherit;
+}
+.cm-s-obsidian pre.HyperMD-header.HyperMD-header-1:before,
+.cm-s-obsidian pre.HyperMD-header.HyperMD-header-2:before {
+  border-bottom: 2px solid var(--background-heading-border);
+  content: '';
+  height: 22px;
+  margin-left: -4px;
+  position:absolute;
+  user-select: none;
+  width: 100%;
+  z-index: 1;
+}
+.cm-s-obsidian pre.HyperMD-header span.cm-header-1:not(.cm-formatting-header) {
+  color: var(--text-heading);
+  font-size: 1.28em;
+  font-weight: 600;
+  letter-spacing: 2.25px;
+  line-height: 1;
+  vertical-align: text-bottom;
+}
+.cm-s-obsidian pre.HyperMD-header span.cm-header-2:not(.cm-formatting-header) {
+  color: var(--text-heading);
+  font-size: 1.20em;
+  font-weight: 600;
+  letter-spacing: 2.15px;
+  line-height: 1;
+  vertical-align: text-bottom;
+}
+.cm-s-obsidian pre.HyperMD-header span.cm-header-3:not(.cm-formatting-header) {
+  color: var(--text-heading);
+  font-size: 1.12em;
+  font-weight: 600;
+  letter-spacing: 2.08px;
+  line-height: 1;
+}
+.cm-s-obsidian pre.HyperMD-header span.cm-header-4:not(.cm-formatting-header) {
+  color: var(--text-heading);
+  font-size: 1.04em;
+  font-weight: 400;
+  letter-spacing: 2.14px;
+  line-height: 1;
+}
+.cm-s-obsidian pre.HyperMD-header span.cm-header-5:not(.cm-formatting-header) {
+  color: var(--text-heading);
+  font-size: 1.04em;
+  font-weight: 400;
+  letter-spacing: 1.34px;
+  line-height: 1;
+}
+.cm-s-obsidian pre.HyperMD-header span.cm-header-6:not(.cm-formatting-header) {
+  color: var(--text-heading);
+  font-size: 1em;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-heading-1);
+  font-weight: 600;
+}
+
+/* HR horizontal line */
+.cm-s-obsidian span.cm-hr {
+  color: var(--text-syntax-transformative);
+  font-family: var(--font-monospace);
+  font-weight: 600;
+}
+.cm-s-obsidian div.HyperMD-hr-bg:after {
+  border-bottom: 2px solid var(--background-horizontal-line);
+  content: '';
+  height: .75em;
+  position:absolute;
+  user-select: none;
+  width: 100%;
+  z-index: -1;
+}
+
+/* Bold, italic, strikethrough, highlight */
+.cm-s-obsidian span > span.cm-strikethrough {
+  text-decoration: line-through;
+}
+.cm-s-obsidian span > span.cm-formatting-strong,
+.cm-s-obsidian span > span.cm-formatting-em,
+.cm-s-obsidian span > span.cm-formatting-strikethrough,
+.cm-s-obsidian span > span.cm-formatting-highlight {
+  background-color: unset;
+  color: var(--text-syntax-invisible);
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 600;
+}
+.cm-s-obsidian .cm-strong,
+.markdown-preview-view strong {
+  color: var(--text-bold);
+  font-weight: 700;
+}
+.cm-s-obsidian .cm-em {
+  font-style: italic;
+}
+.cm-s-obsidian span.cm-formatting-strikethrough,
+.cm-s-obsidian span.cm-formatting-highlight {
+  font-family: var(--font-monospace);
+}
+.markdown-preview-view mark {
+  color: var(--text-normal);
+}
+
+/* HTML tag */
+.cm-s-obsidian span.cm-tag {
+  color: var(--text-syntax-transformative);
+}
+
+/* List */
+.cm-s-obsidian span.cm-formatting-list {
+  color: var(--text-syntax-visible);
+}
+.cm-s-obsidian span.cm-formatting-list-ul {
+  font-weight: 400;
+}
+.cm-s-obsidian pre.HyperMD-list-line-nobullet span.cm-hmd-list-indent::after {
+  content: '';
+  padding-left: 3px;
+}
+.cm-s-obsidian pre.HyperMD-list-line-nobullet span.cm-hmd-list-indent::before {
+  color: var(--text-syntax-invisible);
+  letter-spacing: -4.8px;
+  position:absolute;
+  text-indent: -3.6px;
+  user-select: none;
+  z-index: -1;
+}
+.cm-s-obsidian pre.HyperMD-list-line-nobullet span.cm-hmd-list-indent-1::before {
+  content: '▹';
+}
+.cm-s-obsidian pre.HyperMD-list-line-nobullet span.cm-hmd-list-indent-2::before {
+  content: '▹▹';
+}
+.cm-s-obsidian pre.HyperMD-list-line-nobullet span.cm-hmd-list-indent-3::before {
+  content: '▹▹▹';
+}
+.cm-s-obsidian pre.HyperMD-list-line-nobullet span.cm-hmd-list-indent-4::before {
+  content: '▹▹▹▹';
+}
+.cm-s-obsidian pre.HyperMD-list-line-nobullet span.cm-hmd-list-indent-5::before {
+  content: '▹▹▹▹▹';
+}
+.cm-s-obsidian pre.HyperMD-list-line-nobullet span.cm-hmd-list-indent-6::before {
+  content: '▹▹▹▹▹▹';
+}
+.cm-s-obsidian pre.HyperMD-list-line-nobullet span.cm-hmd-list-indent-7::before {
+  content: '▹▹▹▹▹▹▹';
+}
+.cm-s-obsidian pre.HyperMD-list-line-nobullet span.cm-hmd-list-indent-8::before {
+  content: '▹▹▹▹▹▹▹▹';
+}
+.cm-s-obsidian pre.HyperMD-list-line-nobullet span.cm-hmd-list-indent-9::before {
+  content: '▹▹▹▹▹▹▹▹▹';
+}
+.cm-s-obsidian pre.HyperMD-list-line-nobullet span.cm-hmd-list-indent-10::before {
+  content: '▹▹▹▹▹▹▹▹▹▹';
+}
+ol,
+ul {
+  margin-left: 2px;
+  padding-inline-start: 24px;
+}
+
+/* Task */
+.cm-s-obsidian span.cm-formatting-task {
+  color: var(--text-syntax-visible);
+  font-family: var(--font-monospace);
+  letter-spacing: -5px;
+  vertical-align: text-top;
+}
+.markdown-preview-view .task-list-item {
+  margin-left: 0;
+}
+.markdown-preview-view .task-list-item-checkbox {
+  margin-left: -21.5px;
+}
+input[type="checkbox"] {
+  margin-left: 1px;
+  margin-right: 2px;
+}
+
+/* Hash tag */
+.cm-s-obsidian span.cm-hashtag {
+  color: var(--text-hashtag);
+  font-family: unset;
+  text-decoration: unset;
+}
+.cm-s-obsidian span.cm-hashtag-begin:hover,
+.cm-s-obsidian span.cm-hashtag-begin:hover + .cm-hashtag-end,
+.cm-s-obsidian span.cm-hashtag-end:hover {
+  color: var(--text-hashtag-hover);
+}
+.cm-s-obsidian span.cm-hashtag-begin {
+  background-color: var(--background-hashtag);
+  border-radius: 3px 0 0 3px;
+  padding-left: 1px;
+}
+.cm-s-obsidian span.cm-hashtag-end {
+  background-color: var(--background-hashtag);
+  border-radius: 0 3px 3px 0;
+  padding-right: 1px;
+}
+.cm-s-obsidian span.cm-hashtag-begin.cm-highlight,
+.cm-s-obsidian span.cm-hashtag-end.cm-highlight {
+  background-color: var(--text-highlight-bg-dark);
+  border-radius: 0;
+}
+.markdown-preview-section a.tag {
+  background-color: var(--background-hashtag);
+  border-radius: 4px;
+  color: var(--text-hashtag);
+  padding-left: 2px;
+  padding-right: 2px;
+  text-decoration: none;
+}
+.markdown-preview-section a.tag:hover {
+  color: var(--text-hashtag-hover);
+}
+
+/* URL */
+.cm-s-obsidian span.cm-url:not(.cm-string) {
+  color: var(--text-link);
+  text-decoration: unset;
+}
+.cm-s-obsidian span.cm-url:not(.cm-string):hover {
+  color: var(--text-link-hover);
+  text-decoration: underline;
+}
+
+/* Link square bracket and parenthesis, embed square bracket and exclamation mark */
+.cm-s-obsidian span.cm-formatting-link:not(.cm-footref):not(.cm-hmd-footnote),
+.cm-s-obsidian span.cm-formatting-link-string,
+.cm-s-obsidian span > span.cm-formatting-image {
+  background-color: unset;
+  color: var(--text-syntax-invisible);
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* Internal link */
+.cm-s-obsidian span.cm-hmd-internal-link {
+  color: var(--text-link);
+}
+.cm-s-obsidian span.cm-hmd-internal-link:hover {
+  color: var(--text-link-hover);
+  text-decoration: underline;
+}
+
+/* Named link */
+.cm-s-obsidian span.cm-link:not(.cm-formatting):not(.cm-footref):not(.cm-hmd-footnote) {
+  color: var(--text-link-name);
+}
+.cm-s-obsidian span.cm-string.cm-url:not(.cm-formatting) {
+  color: var(--text-link-url);
+  text-decoration: unset;
+}
+.cm-s-obsidian span.cm-string.cm-url:not(.cm-formatting):hover {
+  color: var(--text-link-url-hover);
+  text-decoration: underline;
+}
+.cm-s-obsidian span.cm-formatting-link-string {
+  text-decoration: unset;
+}
+
+/* Footnote */
+.cm-s-obsidian pre.HyperMD-footnote span.cm-hmd-footnote:not(.cm-formatting) {
+  display: inline-block;
+}
+.cm-s-obsidian span.cm-footref,
+.cm-s-obsidian span.cm-hmd-footnote:not(.cm-formatting) {
+  text-indent: 0;
+}
+.cm-s-obsidian span.cm-footref {
+  font-size: 0.8em;
+}
+.cm-s-obsidian pre.HyperMD-footnote {
+  font-size: unset;
+}
+.cm-s-obsidian span.cm-footref:not(.cm-formatting),
+.cm-s-obsidian pre.HyperMD-footnote span.cm-hmd-footnote:not(.cm-formatting) {
+  color: var(--text-link-name);
+}
+.cm-s-obsidian span.cm-footref.cm-formatting,
+.cm-s-obsidian span.cm-footref:not(.cm-formatting)::first-letter,
+.cm-s-obsidian pre.HyperMD-footnote span.cm-hmd-footnote.cm-formatting,
+.cm-s-obsidian pre.HyperMD-footnote span.cm-hmd-footnote:not(.cm-formatting)::first-letter {
+  color: var(--text-syntax-invisible);
+}
+.markdown-preview-section sup.footnote-ref {
+  line-height: 1em;
+}
+.markdown-preview-section sup.footnote-ref > a {
+  text-decoration: unset;
+}
+.markdown-preview-section .footnote-backref {
+  color: var(--text-accent);
+}
+.markdown-preview-section .footnote-backref:hover {
+  color: var(--text-accent-hover);
+}
+
+/* Table */
+.cm-s-obsidian pre.HyperMD-table-row span.cm-hmd-table-sep {
+  color: var(--text-syntax-visible);
+  font-family: var(--font-monospace);
+  font-weight: 400;
+}
+.cm-s-obsidian pre.HyperMD-table-row-1 > span {
+  color: var(--text-syntax-visible);
+  font-family: var(--font-monospace);
+}
+.cm-s-obsidian pre.HyperMD-table-row {
+  background-color: var(--background-table);
+}
+
+/* Escape character */
+.cm-s-obsidian span.cm-formatting-escape {
+  color: var(--text-syntax-invisible);
+}
+.cm-s-obsidian span.cm-hmd-escape-char {
+  color: unset;
+}
+
+/* Math */
+.cm-s-obsidian span.cm-formatting-math-begin,
+.cm-s-obsidian span.cm-formatting-math-end {
+  color: var(--text-syntax-invisible);
+  font-style: unset;
+}
+.cm-s-obsidian span.cm-math:not(.cm-formatting-math) {
+  color: var(--text-syntax-transformative);
+  font-style: unset;
+}
+
+/* Code */
+.cm-s-obsidian span.cm-inline-code:not(.cm-formatting-code),
+.cm-s-obsidian pre.HyperMD-codeblock,
+.markdown-preview-view code {
+  color: var(--text-code);
+}
+.cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code) {
+  background-color: var(--background-code);
+  padding-left: 1px;
+  padding-right: 1px;
+  border-radius: 3px;
+}
+.cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code).cm-highlight {
+  background-color: var(--text-highlight-bg-dark);
+}
+.cm-s-obsidian span > span.cm-formatting-code,
+.cm-s-obsidian pre.HyperMD-codeblock-begin span.cm-formatting-code-block,
+.cm-s-obsidian pre.HyperMD-codeblock-end span.cm-formatting-code-block {
+  color: var(--text-syntax-invisible);
+  background-color: unset;
+  font-size: unset;
+  font-style: unset;
+  font-weight: 600;
+  text-decoration: unset;
+}
+.cm-s-obsidian span > span.cm-formatting-code {
+  letter-spacing: -2px;
+}
+.markdown-preview-view p code {
+  background-color: var(--background-code);
+  bottom: 1px;
+  padding-bottom: 1px;
+}
+.markdown-preview-view pre > code {
+  bottom: 0;
+}
+.cm-s-obsidian div.HyperMD-codeblock-bg {
+  background-color: var(--background-code);
+  border-left: 0px;
+  border-right: 0px;
+}
+.cm-s-obsidian div.HyperMD-codeblock-begin-bg {
+  background-color: var(--background-code);
+  border-top: 0px;
+}
+.cm-s-obsidian div.HyperMD-codeblock-end-bg {
+  background-color: var(--background-code);
+  border-bottom: 0px;
+}
+.markdown-preview-view pre > code[class*="language-"] {
+  bottom: 2px;
+}
+
+/* Line number */
+.cm-s-obsidian div.CodeMirror-linenumber {
+  color: var(--text-syntax-invisible);
+  font-family: var(--font-monospace);
+}
+
+/* Document title */
+.view-header-title {
+  font-weight: 600;
+}
+.workspace-leaf.mod-active .view-header-title {
+  color: var(--text-heading);
+}
+
+/* Markdown embedding */
+.markdown-preview-view .markdown-embed-title {
+  color: var(--text-heading);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 38px;
+  text-align: unset;
+}
+.markdown-preview-view div.markdown-embed {
+  background: linear-gradient(var(--background-primary-alt) 38px, rgba(0, 0, 0, 0) 0%); 
+  padding: 0 20px 10px 20px;
+}
+.markdown-preview-view div.markdown-embed-content {
+  max-height: unset;
+  padding-right: unset;
+}
+.markdown-preview-view div.markdown-embed-content > :first-child {
+  margin-top: 18px;
+}
+.markdown-preview-view div.markdown-embed-content > :last-child,
+.markdown-preview-view div.markdown-embed-content .footnotes-list .footnote-item > :last-child {
+  margin-bottom: 6px;
+}
+.markdown-preview-view div.markdown-embed-content .footnotes-list {
+  margin-block-end: 6px;
+}
+.markdown-preview-view div.markdown-embed-link {
+  padding: 9px 9px 3px 9px;
+  right: 0;
+  top: 0;
+}
