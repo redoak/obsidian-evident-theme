@@ -12,6 +12,6 @@ To install download and save "obsidian.css" to your vault root folder. In Obsidi
 
 ![Preview](./evident-demo-preview.png)
 
-## App screenshot
+## Full window
 
-![App screenshot](./evident-demo.png)
+![Full window](./evident-demo.png)

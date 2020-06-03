@@ -182,13 +182,13 @@ body {
 .cm-s-obsidian pre.HyperMD-header.HyperMD-header-1:before,
 .cm-s-obsidian pre.HyperMD-header.HyperMD-header-2:before {
   border-bottom: 2px solid var(--background-heading-border);
+  box-sizing: border-box;
   content: '';
-  height: 22px;
+  height: 100%;
   margin-left: -4px;
-  position:absolute;
+  position: absolute;
   user-select: none;
   width: 100%;
-  z-index: 1;
 }
 .cm-s-obsidian pre.HyperMD-header span.cm-header-1:not(.cm-formatting-header) {
   color: var(--text-heading);
@@ -296,15 +296,15 @@ h1, h2, h3, h4, h5, h6 {
 .cm-s-obsidian span.cm-formatting-list-ul {
   font-weight: 400;
 }
-.cm-s-obsidian pre.HyperMD-list-line-nobullet span.cm-hmd-list-indent::after {
-  content: '';
-  padding-left: 3px;
+.cm-s-obsidian pre.HyperMD-list-line-nobullet {
+  border-left: 2.5px solid transparent;
 }
 .cm-s-obsidian pre.HyperMD-list-line-nobullet span.cm-hmd-list-indent::before {
   color: var(--text-syntax-invisible);
+  content: '';
   letter-spacing: -4.8px;
-  position:absolute;
-  text-indent: -3.6px;
+  position: absolute;
+  text-indent: -5.5px;
   user-select: none;
   z-index: -1;
 }
@@ -593,6 +593,8 @@ input[type="checkbox"] {
 }
 .markdown-preview-view div.markdown-embed {
   background: linear-gradient(var(--background-primary-alt) 38px, rgba(0, 0, 0, 0) 0%); 
+  margin-bottom: 24px;
+  margin-top: 24px;
   padding: 0 20px 10px 20px;
 }
 .markdown-preview-view div.markdown-embed-content {
