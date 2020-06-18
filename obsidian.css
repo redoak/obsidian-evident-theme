@@ -97,6 +97,9 @@ body {
 .CodeMirror pre.CodeMirror-line-like {
   padding: 0;
 }
+.markdown-source-view {
+  padding: 0;
+}
 .markdown-preview-view {
   padding-top: 0;
 }
