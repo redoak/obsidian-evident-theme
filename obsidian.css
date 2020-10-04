@@ -139,6 +139,7 @@ body {
 }
 .cm-s-obsidian span.cm-formatting-header {
   font-weight: 400;
+  font-size: inherit;
 }
 .cm-s-obsidian span.cm-formatting-header-1 {
   color: var(--text-heading-1);
